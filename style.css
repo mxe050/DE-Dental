@@ -1,0 +1,420 @@
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  background: #f5f7fa;
+  color: #222;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ---------- ヘッダー ---------- */
+header {
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  padding: 12px 16px 8px;
+  z-index: 100;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.05em;
+  color: #1976d2;
+  letter-spacing: 0.02em;
+}
+
+#onlineCounter {
+  font-size: 0.82em;
+  color: #666;
+  margin-top: 4px;
+}
+
+nav.jump-nav {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+}
+
+nav.jump-nav a {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 16px;
+  background: #e3f2fd;
+  color: #1976d2;
+  text-decoration: none;
+  font-size: 0.82em;
+  white-space: nowrap;
+}
+
+nav.jump-nav a:active {
+  background: #bbdefb;
+}
+
+/* ---------- メイン ---------- */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.test-banner {
+  background: #fff3cd;
+  color: #856404;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 0.9em;
+  text-align: center;
+  border: 1px solid #ffeaa7;
+}
+
+.quiz-section {
+  margin-bottom: 28px;
+  background: white;
+  border-radius: 12px;
+  padding: 18px 16px 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  scroll-margin-top: 130px;
+}
+
+.quiz-section h2 {
+  margin: 0 0 8px 0;
+  color: #1976d2;
+  font-size: 1.1em;
+  border-bottom: 2px solid #e3f2fd;
+  padding-bottom: 8px;
+}
+
+.section-desc {
+  color: #666;
+  font-size: 0.88em;
+  margin: 6px 0 0 0;
+}
+
+.question {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.quiz-section > .question:first-of-type {
+  border-top: none;
+  padding-top: 8px;
+}
+
+.question h3 {
+  font-size: 0.98em;
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.qnum {
+  color: #1976d2;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option {
+  position: relative;
+  padding: 12px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  background: white;
+  transition: border-color 0.2s, background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+}
+
+.option:active {
+  border-color: #90caf9;
+}
+
+.option .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: #e3f2fd;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.option .content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.opt-label {
+  font-size: 0.95em;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.opt-label strong {
+  color: #1976d2;
+  margin-right: 4px;
+}
+
+.opt-count {
+  font-size: 0.82em;
+  color: #555;
+  white-space: nowrap;
+  background: rgba(255,255,255,0.7);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.option.selected {
+  border-color: #1976d2;
+  background: #f5f9ff;
+}
+
+.option.selected .bar {
+  background: #bbdefb;
+}
+
+.option.selected .opt-label strong {
+  color: #0d47a1;
+}
+
+.option.selected .opt-label::after {
+  content: " ✓";
+  color: #1976d2;
+  font-weight: bold;
+}
+
+/* ---------- YouTubeボタン ---------- */
+#yt-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 28px 20px;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+#yt-section p {
+  margin: 0 0 14px 0;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.yt-button {
+  display: inline-block;
+  background: #ff0000;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 28px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  box-shadow: 0 2px 6px rgba(255,0,0,0.25);
+}
+
+.yt-button:active {
+  background: #cc0000;
+}
+
+/* ---------- フッター ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+  font-size: 0.82em;
+}
+
+.footer-note {
+  margin: 0;
+}
+
+/* ---------- エラー ---------- */
+#error {
+  display: none;
+  max-width: 800px;
+  margin: 16px auto;
+  background: #ffebee;
+  color: #c62828;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ffcdd2;
+}
+
+/* ---------- 管理ページ ---------- */
+.admin-body {
+  background: #eceff1;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.admin-wrap {
+  max-width: 500px;
+  margin: 20px auto;
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.admin-wrap h1 {
+  color: #1976d2;
+  margin-top: 0;
+  font-size: 1.3em;
+}
+
+.admin-wrap h2 {
+  color: #333;
+  font-size: 1.05em;
+  margin-top: 0;
+}
+
+.admin-login label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.admin-login input[type=password] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+.admin-login input[type=password]:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+.admin-login button {
+  width: 100%;
+  padding: 12px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.admin-login button:disabled {
+  background: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.err {
+  color: #d32f2f;
+  font-size: 0.9em;
+  margin-top: 8px;
+  min-height: 1.2em;
+}
+
+.ok {
+  color: #2e7d32;
+  font-size: 0.9em;
+  margin-top: 8px;
+  min-height: 1.2em;
+}
+
+.small {
+  font-size: 0.85em;
+  color: #666;
+  margin: 4px 0 12px;
+}
+
+.stats-card, .reset-card {
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #eee;
+}
+
+.stats-card p {
+  margin: 6px 0;
+  font-size: 0.9em;
+}
+
+.btn-secondary {
+  padding: 8px 16px;
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+.btn-secondary:active {
+  background: #bdbdbd;
+}
+
+.btn-warning, .btn-danger {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-bottom: 8px;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-warning {
+  background: #ff9800;
+}
+
+.btn-warning:active {
+  background: #e68900;
+}
+
+.btn-danger {
+  background: #d32f2f;
+}
+
+.btn-danger:active {
+  background: #b71c1c;
+}
+
+.back-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.back-link a {
+  color: #1976d2;
+  text-decoration: none;
+}

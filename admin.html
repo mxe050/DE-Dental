@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>管理ページ | 歯周病と糖尿病 アンケート</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+  <div class="admin-wrap">
+    <h1>管理ページ</h1>
+
+    <div id="login" class="admin-login">
+      <label for="pw">暗証番号を入力してください</label>
+      <input type="password" id="pw" placeholder="暗証番号" autofocus autocomplete="off">
+      <button id="loginBtn">ログイン</button>
+      <div id="loginErr" class="err"></div>
+    </div>
+
+    <div id="panel" class="admin-panel" style="display:none">
+      <div class="stats-card">
+        <h2>現在のデータ</h2>
+        <p><strong>本番：</strong><span id="prodStats">—</span></p>
+        <p><strong>テスト：</strong><span id="testStats">—</span></p>
+        <button id="refreshBtn" class="btn-secondary">最新化</button>
+      </div>
+
+      <div class="reset-card">
+        <h2>リセット</h2>
+        <p class="small">リセットすると回答・セッション情報がすべて消去され、参加者の画面からも選択状態が自動的にクリアされます。</p>
+        <button id="resetTest" class="btn-warning">テストデータをリセット</button>
+        <button id="resetProd" class="btn-danger">本番データをリセット</button>
+        <p id="resetMsg" class="ok"></p>
+      </div>
+
+      <p class="back-link"><a href="index.html">← アンケート画面に戻る</a></p>
+    </div>
+  </div>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
