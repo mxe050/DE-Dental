@@ -208,6 +208,142 @@ main {
   font-weight: bold;
 }
 
+/* ---------- 解説ボタン・解説パネル ---------- */
+.reveal-btn {
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: #fff3e0;
+  color: #e65100;
+  border: 1.5px dashed #ffb74d;
+  border-radius: 8px;
+  font-size: 0.92em;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.reveal-btn:active {
+  background: #ffe0b2;
+}
+
+.reveal-btn--open {
+  background: #fafafa;
+  color: #616161;
+  border-color: #bdbdbd;
+  border-style: solid;
+}
+
+.explanation-panel {
+  margin-top: 10px;
+  padding: 14px 16px;
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-radius: 8px;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.answer-label {
+  font-size: 0.98em;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ffe082;
+  line-height: 1.6;
+}
+
+.answer-label strong {
+  color: #e65100;
+  margin-right: 4px;
+}
+
+.answer-badge {
+  display: inline-block;
+  background: #43a047;
+  color: white;
+  font-size: 0.78em;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-right: 6px;
+  letter-spacing: 0.05em;
+}
+
+.answer-label--no-answer {
+  color: #555;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.explanation-text {
+  font-size: 0.92em;
+  line-height: 1.75;
+  color: #333;
+  margin-bottom: 12px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.references {
+  border-top: 1px dashed #ffcc80;
+  padding-top: 10px;
+  font-size: 0.86em;
+}
+
+.references strong {
+  display: block;
+  color: #e65100;
+  margin-bottom: 6px;
+  font-size: 0.92em;
+}
+
+.references ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.references li {
+  margin-bottom: 10px;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.references li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ff9800;
+}
+
+.references a {
+  color: #1565c0;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.references a:active,
+.references a:hover {
+  text-decoration: underline;
+}
+
+.references small {
+  color: #666;
+  font-size: 0.88em;
+  display: block;
+  margin-top: 2px;
+}
+
 /* ---------- YouTubeボタン ---------- */
 #yt-section {
   max-width: 800px;
