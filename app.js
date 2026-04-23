@@ -26,7 +26,7 @@ const QUESTIONS = [
   { id: 2, section: 'intro', text: '糖尿病の入院患者さんの口の中を、最後に観察したのはいつですか？',
     options: { A: '今週中に観察した', B: '今月中に観察した', C: 'それ以前', D: '観察したことがない' },
     answer: null,
-    explanation: 'この質問に「正解」はありませんが、糖尿病患者の口腔内観察は、入院時および日々のケア時の基本項目です。口腔状態の悪化は血糖コントロールに直接影響します。OHAT (Oral Health Assessment Tool) など標準化されたアセスメントツールを用いれば、看護師でも簡便・再現性高く評価できます。',
+    explanation: 'この質問に「正解」はありませんが、糖尿病患者の口腔内観察は、入院時および日々のケア時の基本項目です。口腔状態の悪化は血糖コントロールに直接影響します。OHAT (Oral Health Assessment Tool) など標準化されたアセスメントツールを用いれば、看護師でも簡便・再現性高く評価できます。ただし、OHATは、歯周病の診断のためのツールではありません。',
     references: [
       { title: 'Chalmers JM et al. OHAT (Oral Health Assessment Tool) の妥当性・信頼性 (2005)',
         citation: 'Aust Dent J. 2005;50(3):191-9.',
@@ -40,10 +40,7 @@ const QUESTIONS = [
     references: [
       { title: '日本歯周病学会「糖尿病患者に対する歯周治療のガイドライン 2014 改訂版」',
         citation: '日本歯周病学会（公式PDF）',
-        url: 'https://www.perio.jp/publication/upload_file/guideline_diabetes.pdf' },
-      { title: 'Sanz M et al. 歯周病と糖尿病：IDF/EFP共同ワークショップ コンセンサスレポート (2018)',
-        citation: 'J Clin Periodontol. 2018;45(2):138-149.',
-        url: 'https://pubmed.ncbi.nlm.nih.gov/29280500/' }
+        url: 'https://www.perio.jp/publication/upload_file/guideline_diabetes.pdf' }
     ]
   },
   { id: 4, section: 'intro', text: '歯周病と糖尿病の関係について、自分の知識は十分だと思いますか？',
@@ -65,7 +62,7 @@ const QUESTIONS = [
     references: [
       { title: 'Löe H. 歯周病：糖尿病の第6の合併症 (1993)',
         citation: 'Diabetes Care. 1993;16(1):329-34.',
-        url: 'https://pubmed.ncbi.nlm.nih.gov/8422801/' }
+        url: 'https://diabetesjournals.org/care/article-abstract/16/1/329/20741/Periodontal-Disease-The-sixth-complication-of?redirectedFrom=fulltext' }
     ]
   },
   { id: 6, section: 'ch1', text: '糖尿病患者の歯周炎の有病率は、一般人口のおよそ何倍？',
@@ -116,14 +113,7 @@ const QUESTIONS = [
     },
     answer: 'B',
     explanation: '歯周病治療に真剣に取り組む患者さんは、同時に食事・運動・服薬アドヒアランスなど他の健康行動も改善している可能性があります。これを「交絡因子 (confounding factors)」と呼び、観察研究・介入研究で結果を解釈する際の根本的な注意点です。因果関係を断定するには、厳密な条件を揃えた大規模ランダム化比較試験が必要です。',
-    references: [
-      { title: "D'Aiuto F et al. 2型糖尿病患者における歯周炎治療の全身的効果 (2018)",
-        citation: 'Lancet Diabetes Endocrinol. 2018;6(12):954-965.',
-        url: 'https://pubmed.ncbi.nlm.nih.gov/30389323/' },
-      { title: 'Sanz M et al. 歯周病と糖尿病：IDF/EFP共同コンセンサス (2018)',
-        citation: 'J Clin Periodontol. 2018;45(2):138-149.',
-        url: 'https://pubmed.ncbi.nlm.nih.gov/29280500/' }
-    ]
+    references: []
   },
 
   // ========== 第2章 ==========

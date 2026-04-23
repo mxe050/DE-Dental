@@ -76,6 +76,35 @@ main {
   border: 1px solid #ffeaa7;
 }
 
+.disclaimer {
+  max-width: 800px;
+  margin: 16px auto 0;
+  padding: 14px 18px;
+  background: #fff3e0;
+  border: 1px solid #ffcc80;
+  border-left: 4px solid #ef6c00;
+  border-radius: 8px;
+  color: #4e342e;
+}
+
+.disclaimer-title {
+  margin: 0 0 8px 0;
+  font-size: 0.98em;
+  color: #bf360c;
+  font-weight: 700;
+}
+
+.disclaimer ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.88em;
+  line-height: 1.7;
+}
+
+.disclaimer li {
+  margin-bottom: 4px;
+}
+
 .quiz-section {
   margin-bottom: 28px;
   background: white;
